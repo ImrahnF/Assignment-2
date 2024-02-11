@@ -1,5 +1,30 @@
 '''
-App.py
+App.py. This is where everything happens.
+
+--// Product Class functions //--
+__init__():
+- Simply starts when initializing the Product. Starts with empty values (but can be hardcoded for testing purposes)
+
+update_info():
+- this is called after the user gives their inputs. it updates the values created when it was initialized
+
+__str__():
+- just used for testing purposes to check the object's values
+
+generate_statement():
+- this is the simulation that runs 12 times to replicate a years worth of sales.
+
+
+--// Every other function //--
+monthly_statement():
+- simply displays the month's progress in a visually appealing way
+
+get_input():
+- makes sure numbers are inputted when it requries a number
+
+get_inputs():
+- asks for the inputs
+
 '''
 import random
 ##############################################################################################################################################
@@ -34,15 +59,14 @@ class Product:
 
     # this takes whatever values it has and runs a monthly simulation, keeping track of everything
     def generate_statement(self):
+        # the following values hold the year's culminative statistics to help calculate total profit at the end
         total_manufactured = 0
         total_cost = 0.0
         total_sold = 0
-        
         total_revenue = 0.0
 
+        # this runs 12 times just like a year
         for i in range(1, 13):
-            # do this 12 times
-
             # add x amount of units manufactured for this month to the total amount manufactured
             total_manufactured += self.monthly_units
             self.stock_level += self.monthly_units
