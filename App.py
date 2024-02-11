@@ -30,6 +30,11 @@ class Prodcut:
                f"Estimated Monthly Units Manufactured: {self.monthly_units}"
 
     def generate_statement(self):
+        # initialize lists to store the detail
+        monthly_stock = [self.stock_level]
+        total_units_sold = 0
+        total_units_manufactured = 0
+        net_profit_loss = []
         pass
 
 
